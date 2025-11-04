@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+
+  <!-- ✅ Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Stack grid columns on small screens -->
+  <style>
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="p-4">
+  <!-- 🟦 HEADER -->
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-3xl">Responsive Image Gallery</h1>
+  </header>
+
+  <!-- 🟨 MAIN AREA -->
+  <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+
+    <!-- 🟥 FLEX SECTION -->
+    <section class="lg:col-span-2 flex">
+      <div class="bg-red-200 p-4 w-1/2">Flexbox Item 1</div>
+      <div class="bg-red-400 p-4 w-1/2">Flexbox Item 2</div>
+    </section>
+
+    <!-- 🟩 SIDEBAR -->
+    <aside class="bg-green-200 p-4">Sidebar</aside>
+
+  </main>
+
+  <!-- 🖼️ GALLERY SECTION BELOW MAIN -->
+  <section class="gallery grid grid-cols-3 gap-4 mt-8">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 1" class="w-full h-auto rounded-lg shadow-md">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 2" class="w-full h-auto rounded-lg shadow-md">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 3" class="w-full h-auto rounded-lg shadow-md">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 4" class="w-full h-auto rounded-lg shadow-md">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 5" class="w-full h-auto rounded-lg shadow-md">
+    <img src="https://via.placeholder.com/300" alt="Gallery image 6" class="w-full h-auto rounded-lg shadow-md">
+  </section>
+
+  <!-- ⚫ FOOTER -->
+  <footer class="bg-gray-800 text-white p-4 mt-4 text-center">
+    <p>&copy; 2024 John Doe's Gallery</p>
+  </footer>
+</body>
+</html>
